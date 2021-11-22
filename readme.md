@@ -8,9 +8,9 @@
 
 Some basic commands are:
 
-`` 
+```
   Required NodeJS installed
   `npm install` then run `npm run dev`
-``
+```
 
 ### &copy; 2021 Nguyễn Dương Minh Đức | justdoit-kyrie
