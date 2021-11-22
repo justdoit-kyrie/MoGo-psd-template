@@ -1,6 +1,8 @@
 const menuToggle = document.querySelector(".header-toggle");
 const menuHeader = document.querySelector(".header-menu");
 const closeBtn = document.querySelector(".close-btn");
+const header = document.querySelector("header");
+const headerTop = header.querySelector(".header-top");
 
 menuToggle.addEventListener("click", (e) => {
   menuHeader.classList.add("open");
@@ -16,22 +18,22 @@ window.addEventListener("click", (e) => {
 });
 
 const menuLink = document.querySelectorAll(".header-menu-link");
-Array.from(menuLink).forEach(item => {
-  item.addEventListener('click', (e) => {
+Array.from(menuLink).forEach((item) => {
+  item.addEventListener("click", (e) => {
     menuHeader.classList.remove("open");
-  })
-})
+  });
+});
 
-const wedoItemHeader = document.querySelectorAll('.wedo-item-header');
-const wedoItem = document.querySelectorAll('.wedo-item');
-Array.from(wedoItemHeader).forEach(item => {
-  item.addEventListener('click', (e) => {
-    Array.from(wedoItem).forEach(item => {
-      item.classList.remove('active');
+const wedoItemHeader = document.querySelectorAll(".wedo-item-header");
+const wedoItem = document.querySelectorAll(".wedo-item");
+Array.from(wedoItemHeader).forEach((item) => {
+  item.addEventListener("click", (e) => {
+    Array.from(wedoItem).forEach((item) => {
+      item.classList.remove("active");
     });
-    e.target.closest('.wedo-item').classList.add('active');
-  })
-})
+    e.target.closest(".wedo-item").classList.add("active");
+  });
+});
 
 // slick slider
 $(document).ready(function () {

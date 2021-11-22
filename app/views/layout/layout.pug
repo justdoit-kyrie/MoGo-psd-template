@@ -19,10 +19,11 @@ html(lang="en")
 		link(rel="stylesheet", href="styles/fontawesome.css")
 		link(rel="stylesheet", href="styles/styles.css")
 	body(class=bodyClass)
-		block header
-			include ../blocks/header
-		block container
-		block footer
-			include ../blocks/footer
+		.wrapper
+			block header
+				include ../blocks/header
+			block container
+			block footer
+				include ../blocks/footer
 		block layer
 		include ../blocks/scripts

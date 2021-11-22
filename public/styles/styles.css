@@ -294,7 +294,7 @@ button {
       background: #fff;
       display: block;
       padding: 2rem 2.5rem;
-      z-index: 10;
+      z-index: 20;
       -webkit-transform: translateX(100%);
       transform: translateX(100%);
       -webkit-transition: -webkit-transform 0.25s ease-in;
