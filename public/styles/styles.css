@@ -109,7 +109,8 @@ button {
   .header-logo {
     font-size: 3rem;
     font-weight: 600;
-    color: #fff; }
+    color: #fff;
+    color: red; }
   .header-menu-link {
     text-transform: uppercase;
     display: inline-block;
