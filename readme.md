@@ -5,6 +5,9 @@
 **Brief:** A website UX/UI
 
 **Techs:** Gulp, Pug, HTML5, CSS/SASS, JS
+
+Some basic commands are:
+
 `` 
   Required NodeJS installed
   `npm install` then run `npm run dev`
