@@ -1,0 +1,16 @@
+section.wedo
+    .container
+        .wedo-main
+            +blockBox('Service','What we do', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias aperiam, quo blanditiis distinctio necessitatibus velit voluptate, sapiente sint rem debitis, quos nisi vero exercitationem accusantium. In explicabo quaerat quisquam quas?')
+            .wedo-content
+                img(src="/images/img-wedo.png", alt="" class="wedo-image")
+                .wedo-actual-content
+
+                    //- accordion
+                    //- mixin syntax:
+                        !flag is for element 'active' or 'default' 
+                        wedoListItem(src, title, desc, alt, flag)
+                        
+                    +wedoListItem("/images/img-wedo-icon1.png", "Photography", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad eos illo numquam vitae! Quos a, impedit ullam cupiditate in repellat omnis autem. Assumenda corporis ex eos id ipsa dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad eos illo numquam vitae! Quos a, impedit ullam cupiditate in repellat omnis autem. Assumenda corporis ex eos id ipsa dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad eos illo numquam vitae! Quos a, impedit ullam cupiditate in repellat omnis autem. Assumenda corporis ex eos id ipsa dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad eos illo numquam vitae! Quos a, impedit ullam cupiditate in repellat omnis autem. Assumenda corporis ex eos id ipsa dic",'', 'active')
+                    +wedoListItem("/images/img-wedo-icon2.png", "Creativity")
+                    +wedoListItem("/images/img-wedo-icon3.png", "web design")

@@ -1,0 +1,17 @@
+section.team#team
+	.container
+		.team-main
+			+blockBox('Who we are','Meet our team','Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque excepturi eos vitae officiis. Asperiores optio, et debitis quae, delectus omnis laborum explicabo dignissimos quo consectetur illum fugit repudiandae sapiente aut!')
+			.team-list
+
+				//- mixin syntax:
+					!hrefs will be less and equal than 4
+					teamListItem(src, name, position, alt, ...hrefs)
+
+				+teamListItem("/images/img-team1.png", 'Matthew Dix', 'Graphic Design','' ,'#team1', '#team2', '#team3', '#team4')
+				+teamListItem("/images/img-team2.png", 'Christopher Cambell', 'Branding UX/design')
+				+teamListItem("/images/img-team3.png", 'Michel Fertic', 'Developer')
+section.brand
+	.container
+		img(src="/images/img-logos.png", alt="")
+

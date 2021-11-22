@@ -1,0 +1,72 @@
+.services {
+  &-main {
+    padding: 11rem 0 12rem;
+    background: #fff;
+  }
+
+  &-list {
+    @include flexBox;
+    gap: 0 4rem;
+    margin-top: 5rem;
+
+    &:first-child {
+      margin: 6.5rem 0;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid $gray-darker-color;
+    }
+  }
+
+  &-item {
+    width: calc(calc(100% / 3) - calc(4rem * 2 / 3));
+    @include flexBox(flex-start);
+
+    &-image {
+      margin: 0 3rem;
+      flex-shrink: 0;
+    }
+
+    &-info {
+      flex: 1;
+      height: 100%;
+      // @include flexBox(stretch, space-between, column);
+      @include flexBox2((
+        justify-content: space-between,
+        direction: column,
+      ));
+    }
+
+    &-title {
+      color: $title-color;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      line-height: 1.4;
+      @include textClamp(2);
+    }
+
+    &-desc {
+      color: $text-color;
+      line-height: 1.6;
+      font-weight: 300;
+      font-family: $secondary-font;
+      @include textClamp(2);
+    }
+  }
+
+  @include maxWidth(1023px) {
+    &-main {
+      padding: 5rem 0 6rem;
+    }
+    &-list {
+      display: block;
+    }
+
+    &-item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

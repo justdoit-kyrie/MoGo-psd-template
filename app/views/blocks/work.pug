@@ -1,0 +1,25 @@
+section.work
+    .container
+        +blockBox("What we do", "Some of our work",'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dolores sint? In odit eligendi ipsum, minima et laboriosam qui distinctio soluta error quidem sed voluptatum nam ducimus, voluptatem rem earum.')
+    .work-list 
+        //- mixin syntax:
+            ! flag: DOM element have class 'work-item--full' or 'work-item'
+                    Default value = false
+            workListItem(src, title, description, alt, flag)
+        +workColumnItem
+            +workListItem("/images/img-work1.png", 'Creatively designed', 'Lorem ipsum, dolor ipsum')
+            +workListItem("/images/img-work2.png", 'Creatively designed', 'Lorem ipsum, dolor sit')
+
+        +workColumnItem
+            +workListItem("/images/img-work3.png", 'Creatively designed', 'Lorem ipsum, dolor sit')
+            +workListItem("/images/img-work4.png", 'Creatively designed', 'Lorem ipsum, dolor sit')
+
+        +workColumnItem
+            +workListItem("/images/img-work5.png", 'Creatively designed', 'Lorem ipsum, dolor sit', '', true)
+
+        +workColumnItem
+            +workListItem("/images/img-work6.png", 'Creatively designed', 'Lorem ipsum, dolor sit')
+            +workListItem("/images/img-work7.png", 'Creatively designed', 'Lorem ipsum, dolor sit')
+
+
+        

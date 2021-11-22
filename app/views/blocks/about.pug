@@ -1,0 +1,17 @@
+section.about
+	.container
+		.about-main
+			//- mixin syntax:
+				blockBox(caption, title, description)
+			+blockBox("What we do", "Story about us", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Placeat, suscipit beatae voluptates voluptate dolore, cum in doloribus, tenetur accusantium facere tempore minus alias! Ea, aliquid. Voluptatibus, iure vitae.")
+			.about-list
+				//- mixin syntax:
+					object = { src, title, alt }
+					aboutListItem(object)
+				+aboutListItem({})
+				+aboutListItem({
+					src: "/images/img-about2.png",
+				})
+				+aboutListItem({
+					src: "/images/img-about3.png",
+				})

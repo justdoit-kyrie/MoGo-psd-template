@@ -1,0 +1,140 @@
+mixin headerNavItem(content, href = '#')
+	if content
+		li.header-menu-item
+			a.header-menu-link(href= href)= content
+	else
+		if block
+			li.header-menu-item
+				a.header-menu-icon(href= href)
+					block
+
+mixin headerBottomItem(number, text, priority)
+	if priority
+		.header-bottom-item.is-active
+				span.header-bottom-number= number
+				span.header-bottom-text= text
+	else
+		.header-bottom-item
+				span.header-bottom-number= number
+				span.header-bottom-text= text
+
+mixin aboutListItem({src = "/images/img-about1.png", alt = '', title = "Super Team"})
+	.about-item
+		img.about-image(src = src, alt = alt)
+		.about-content
+				i.fa.fa-users.about-icon
+				span.about-title= title
+
+mixin numberListItem(count, text)
+	.number-item
+		h4.number-item-count= count
+		span.number-item-text= text
+
+mixin servicesListItem(src, title, description, alt='')
+	.services-item
+		img(src= src, alt= alt class="services-item-image")
+		.services-item-info
+			h3.services-item-title= title
+			p.services-item-desc= description
+
+mixin wedoListItem(src, title, content, alt='', flag)
+	.wedo-item(class= flag)
+		.wedo-item-header
+			img(src= src, alt= alt class="wedo-item-icon")
+			h3.wedo-item-title= title
+			i.fal.fa-angle-up.wedo-item-arrow
+		if content
+			.wedo-item-content-wrapper
+				.wedo-item-content= content
+
+mixin teamSocialItemList(href = '#team', iconClass)
+	li.team-item-social-item
+		a.team-item-social-item-link(href= href)
+			i(class= iconClass).team-item-social-item-icon
+
+- const teamSocialIcons = ['fab fa-facebook-f', 'fab fa-twitter','fab fa-pinterest-p', 'fab fa-instagram'];
+mixin teamListItem(src = '', name = '',position = '', alt = '', ...hrefs)
+	.team-item
+		.team-item-wrapper
+			img(src= src, alt="" class="team-item-image")
+			.team-item-content
+				ul.team-item-social
+					+teamSocialItemList(hrefs[0], teamSocialIcons[0])
+					+teamSocialItemList(hrefs[1], teamSocialIcons[1])
+					+teamSocialItemList(hrefs[2], teamSocialIcons[2])
+					+teamSocialItemList(hrefs[3], teamSocialIcons[3])
+		.team-item-info
+			h3.team-item-name= name
+			span.team-item-position= position
+
+mixin workListItem(src = '', title, description, alt, flag = false)
+	.work-item(class = flag ? 'work-item--full' : '')
+		img(src= src, alt= alt class="work-image")
+		.work-content
+			img(src="/images/img-work-icon.png", alt="" class="work-icon")
+			h3.work-title= title
+			span.work-desc.text.text-light= description
+
+mixin workColumnItem
+	.work-column
+		if block
+			block
+
+mixin peopleItemList(src, name, position, description= 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime dolore sunt delectus voluptates necessitatibus rem nulla mollitia perspiciatis quibusdam vero impedit, sequi cum est illum incidunt sint, quae consequuntur! Odio?', alt = '')
+	li.people-item
+		img.people-image(src = src, alt = alt)
+		.people-info
+			h3.people-name= name
+			span.people-position.text.text--light= position
+			p.people-desc.text= description
+
+mixin storyItemList(src = "/images/img-blog1.png", dateNumber = '15', dateText = 'Jan', title= 'Lorem, ipsum dolor sit amet consectetur adipisicing elit', desc = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime dolore sunt delectus voluptates necessitatibus rem nulla mollitia perspiciatis quibusdam vero impedit, sequi cum est illum incidunt sint, quae consequuntur! Odio?', views = '542', comments = '15',alt = '')
+	li.story-item
+		.story-media
+			img.story-image(src = src, alt= alt)
+			.story-date
+				span.story-date-number= dateNumber
+				span.story-date-text.text.text--light= dateText
+		h3.story-title= title
+		.story-desc.text
+			p.story-desc-text= desc
+		.story-meta
+			.story-meta-item
+				i.fa.fa-eye.story-meta-icon
+				span.story-meta-number.text= views
+			.story-meta-item
+				i.fa.fa-comment.story-meta-icon
+				span.story-meta-number.text= comments
+
+mixin quoteItemList(src = "/images/img-quote.png", type = false, desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem provident nostrum, explicabo fuga accusantium ipsa iste nesciunt. Officiis quos aut quod! Dolorum, in facere provident omnis perferendis eos ipsa consequuntur.', author = 'Jon Doe', alt = "")
+	.quote-content
+		if type
+			img(src= src, alt="").quote-image
+		else
+			.quote-icon
+				img(src= src, alt="")
+		.quote-info
+			p.quote-desc= desc
+			span.quote-author= author
+
+mixin footerSocialItem(href = '#', className = 'fab.fa-facebook')
+	a(href = href).footer-social-icon
+		i(class = className)
+
+mixin footerBlogItem(href = '#', src = '/images/img-blogs1.png', title = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit', date = 'Jan 9, 2016', alt = '')
+	a(href=href).footer-blog
+		img.footer-blog-image(src= src, alt= alt)
+		.footer-blog-info
+			h4.footer-blog-title= title
+			span.footer-blog-time.text.text-light= date
+
+mixin footerImageItem(src = '/images/img-work1.png', alt = '')
+	.footer-image
+		img(src= src, alt= alt)
+
+mixin blockBox(caption, title, description)
+	.block-box
+		h3.block-box-caption= caption
+		h2.block-box-title= title
+		if description
+			p.block-box-desc= description

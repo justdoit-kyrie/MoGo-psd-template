@@ -1,0 +1,81 @@
+.wedo {
+  padding: 11rem 0;
+
+  &-image {
+    object-fit: cover;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    &-header {
+      padding: 1.5rem;
+      border: 1px solid $gray-lighter-more-color;
+      @include flexBox(center);
+      cursor: pointer;
+    }
+
+    &-icon {
+      margin-right: 1.5rem;
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: 500;
+      @include textClamp(1);
+      padding-right: 1rem;
+    }
+
+    &-arrow {
+      margin-left: auto;
+      font-size: 3rem;
+      color: $gray-darker-color;
+    }
+
+    &-content {
+      padding-right: 2rem;
+      font-size: 1.5rem;
+      font-family: $secondary-font;
+      font-style: italic;
+      line-height: 1.6;
+      font-weight: 300;
+      color: $text-color;
+      overflow-y: auto;
+      max-height: 14rem;
+      @include styleScroll(0.6rem, $third-color, 20px);
+      display: none;
+    }
+
+    &.active {
+      .wedo-item-content-wrapper {
+        padding: 2rem;
+        border: 1px solid $gray-lighter-more-color;
+        border-top: none;
+      }
+
+      .wedo-item-content {
+        display: block;
+      }
+    }
+  }
+
+  @include minWidth(768px) {
+    &-content {
+      @include flexBox;
+      gap: 0 3rem;
+
+      & > * {
+        width: calc(50% - 1.5rem);
+      }
+    }
+  }
+
+  @include maxWidth(767px) {
+    padding: 5rem 0;
+
+    &-actual-content {
+      margin-top: 2rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+footer.footer
+    .container
+        .footer-main
+            .footer-top
+                .footer-column 
+                    a(href="index.html").footer-heading.footer-heading--logo MoGo
+                    p.footer-desc.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quae, ex maxime temporibus porro harum voluptatibus pariatur perspiciatis explicabo repudiandae. Et nesciunt quod iure fugiat illo excepturi illum officiis perferendis?
+                    p.footer-follower <strong>15k</strong> followers
+                    .footer-social
+                        span.text Follow Us:
+                        .footer-social-list
+                            +footerSocialItem
+                            +footerSocialItem("#", "fab fa-twitter")
+                            +footerSocialItem("#", "fab fa-instagram")
+                            +footerSocialItem("#", "fab fa-pinterest")
+                            +footerSocialItem("#", "fab fa-youtube")
+                            +footerSocialItem("#", "fab fa-dribbble")
+                            +footerSocialItem("#", "fab fa-tumblr")
+                            +footerSocialItem("#", "fab fa-google-plus")
+                    form.footer-form(action="javascript:void(0)")
+                        input(type="email" placeholder="Your Email").footer-form-input
+                        button.footer-form-button Subcribe
+                .footer-column
+                    h3.footer-heading Blogs
+                    +footerBlogItem("#","/images/img-blogs1.png", "Lorem, ipsum dolor sit amet consectetur adipisicing elit", "Jan 9123123, 2016")
+                    +footerBlogItem("#","/images/img-blogs2.png", "Lorem, ipsum dolor sit amet consectetur adipisicing elit", "Jan 9, 2016")
+                    +footerBlogItem("#","/images/img-blogs3.png", "Lorem, ipsum dolor sit amet consectetur adipisicing elit", "Jan 9, 2016")
+                .footer-column
+                    h3.footer-heading Instagram 
+                    .footer-images
+                        +footerImageItem
+                        +footerImageItem("/images/img-work2.png")
+                        +footerImageItem("/images/img-work3.png")
+                        +footerImageItem("/images/img-work4.png")
+                        +footerImageItem("/images/img-work5.png")
+                        +footerImageItem("/images/img-work6.png")
+                        +footerImageItem("/images/img-work7.png")
+                        +footerImageItem
+                        +footerImageItem("/images/img-work2.png")
+                    a(href="#").footer-images-more.text.text-light View more photos 
+            .footer-bottom &copy; 2016 MoGo free PSD template by <span>Laaqiq</span>

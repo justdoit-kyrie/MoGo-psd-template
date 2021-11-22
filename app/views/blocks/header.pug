@@ -1,0 +1,36 @@
+//- header -> header-top -> header-content -> header-bottom -> responsive -> menu Javascript -> slick slider
+header.header
+	.container
+		.header-top
+			a.header-logo(href="/") MoGo
+			i.fa.fa-bars.header-toggle
+
+			//- mixin syntax:
+					!href default: '#'
+					headerNavItem(content, href)
+						block
+
+			ul.header-menu
+				+headerNavItem('about')
+				+headerNavItem('service')
+				+headerNavItem('work')
+				+headerNavItem('blog')
+				+headerNavItem('contact')
+				+headerNavItem
+					i.fa.fa-shopping-cart
+				+headerNavItem
+					i.fa.fa-search
+		.header-content
+			h2.header-content-caption Creative template
+			h1.header-content-main Welcome to MoGo
+			a.header-content-more(href="#") Learn more
+
+		//- mixin syntax:
+			!priority: for element ACTIVE (first element)
+			headerBottomItem(number, text, priority)
+
+		.header-bottom
+			+headerBottomItem('01', 'Intro', 1)
+			+headerBottomItem('02', 'Work')
+			+headerBottomItem('03', 'About')
+			+headerBottomItem('04', 'Contacts')

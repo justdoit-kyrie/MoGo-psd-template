@@ -1,0 +1,142 @@
+.story {
+  padding: 10rem 0;
+  background: #fff;
+
+  &-list {
+    margin-top: 4rem;
+    @include flexBox(stretch, space-between);
+  }
+
+  &-item {
+    width: calc(calc(100% / 3) - 2rem);
+  }
+
+  &-image {
+    @include size(100%, 24rem);
+    object-fit: cover;
+  }
+
+  &-media {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  &-date {
+    background: $third-color;
+    padding: 1.5rem 2rem 2rem;
+    color: #fff;
+    @include flexBox(center, center, column);
+    position: absolute;
+    bottom: 1rem;
+    left: -1rem;
+    z-index: 2;
+
+    &-number {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    &-text {
+      color: #fff;
+    }
+  }
+
+  &-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  &-desc {
+    font-style: normal;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &-meta {
+    @include flexBox(center);
+
+    &-item {
+      margin-right: 2rem;
+    }
+
+    &-icon {
+      color: $third-color;
+      margin-right: 0.5rem;
+    }
+  }
+
+  @include maxWidth(1023px) {
+    padding: 5rem 0;
+
+    &-image {
+      @include size(100%, 14rem);
+    }
+
+    &-date {
+      padding: 1rem 1.5rem;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+    }
+
+    &-desc {
+      font-size: 1.3rem;
+      &-text {
+        @include textClamp(4);
+      }
+    }
+  }
+
+  @include maxWidth(767px) {
+    &-list {
+      display: block;
+    }
+
+    &-image {
+      height: auto;
+    }
+
+    &-date {
+      bottom: 0.5rem;
+      left: -0.5rem;
+    }
+
+    &-item {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+.map {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, rgba(#fff, 0.6), rgba(#fff, 0.6)),
+    url("../images/img-map.png") no-repeat center / cover;
+
+  &-main {
+    @include flexBox(center, center, column);
+  }
+
+  &-heading {
+    position: relative;
+    color: $primary-color;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    &::after {
+      content: "";
+      @include size(6.5rem, 0.4rem);
+      @include absoluteCenter;
+      bottom: 0;
+      background: $primary-color;
+    }
+  }
+}
