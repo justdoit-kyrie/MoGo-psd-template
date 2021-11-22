@@ -5,7 +5,9 @@
 html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem; }
 
 .text {
   font-family: "Roboto", sans-serif;
@@ -109,8 +111,7 @@ button {
   .header-logo {
     font-size: 3rem;
     font-weight: 600;
-    color: #fff;
-    color: red; }
+    color: #fff; }
   .header-menu-link {
     text-transform: uppercase;
     display: inline-block;

@@ -15,6 +15,24 @@ window.addEventListener("click", (e) => {
   menuHeader.classList.remove("open");
 });
 
+const menuLink = document.querySelectorAll(".header-menu-link");
+Array.from(menuLink).forEach(item => {
+  item.addEventListener('click', (e) => {
+    menuHeader.classList.remove("open");
+  })
+})
+
+const wedoItemHeader = document.querySelectorAll('.wedo-item-header');
+const wedoItem = document.querySelectorAll('.wedo-item');
+Array.from(wedoItemHeader).forEach(item => {
+  item.addEventListener('click', (e) => {
+    Array.from(wedoItem).forEach(item => {
+      item.classList.remove('active');
+    });
+    e.target.closest('.wedo-item').classList.add('active');
+  })
+})
+
 // slick slider
 $(document).ready(function () {
   $(".quote-main").slick({
